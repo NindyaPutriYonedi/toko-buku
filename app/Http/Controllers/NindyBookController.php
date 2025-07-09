@@ -243,3 +243,4 @@ public function processBuyNowAll(Request $request)
 }
 
 }
+

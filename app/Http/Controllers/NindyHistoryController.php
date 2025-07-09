@@ -17,4 +17,3 @@ class NindyHistoryController extends Controller
         return view('books.history', compact('orders'));
     }
 }
-
