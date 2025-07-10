@@ -54,3 +54,4 @@ class AdminCategoryController extends Controller
         return redirect()->route('admin.categories.index')->with('success', 'Kategori berhasil dihapus!');
     }
 }
+

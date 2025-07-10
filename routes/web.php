@@ -40,7 +40,6 @@ Route::post('/buy-now/{id}', [NindyBookController::class, 'processBuyNow'])->nam
  Route::get('/buy-now', [NindyBookController::class, 'showBuyNowAll'])->name('buyNow.showAll');
         Route::post('/buy-now', [NindyBookController::class, 'processBuyNowAll'])->name('buyNow.processAll');
 
-
 });
 
 Route::get('/book/{id}', [NindyBookController::class, 'show'])->name('book.show');
