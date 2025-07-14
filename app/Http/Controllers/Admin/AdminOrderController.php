@@ -19,4 +19,16 @@ class AdminOrderController extends Controller
         $order = NindyOrder::with('user', 'items.book')->findOrFail($id);
         return view('admin.orders.show', compact('order'));
     }
+
+    public function destroy($id)
+{
+    $order = NindyOrder::findOrFail($id);
+
+    // Hapus juga item-order agar tidak orphan (jika tidak pakai cascade)
+    $order->items()->delete();
+
+    $order->delete();
+
+    return redirect()->route('admin.orders')->with('success', 'Order berhasil dihapus.');
+}
 }

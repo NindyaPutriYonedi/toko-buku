@@ -142,9 +142,9 @@
 
                 <div class="col-md-4 mb-4">
                     <h5 class="footer-heading">Kontak Kami</h5>
-                    <p><i class="fas fa-map-marker-alt me-2"></i>Jl. Buku Indah No. 45, Padang</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Jl. Kenanga No. 45, Padang</p>
                     <p><i class="fas fa-phone me-2"></i>+62 812 3456 7890</p>
-                    <p><i class="fas fa-envelope me-2"></i>cs@nindyabook.com</p>
+                    <p><i class="fas fa-envelope me-2"></i>cp@nindyabook.com</p>
                     <p><i class="fas fa-clock me-2"></i>Senin - Jumat: 09.00 - 17.00</p>
                 </div>
 

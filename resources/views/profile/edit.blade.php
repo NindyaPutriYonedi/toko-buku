@@ -6,9 +6,9 @@
 <div class="container py-4" style="max-width: 600px;">
     <h2>Edit Profil</h2>
 
-    @if(session('success'))
+    {{-- @if(session('success'))
     <div class="alert alert-success">{{ session('success') }}</div>
-    @endif
+    @endif --}}
 
     <form action="{{ route('profile.update') }}" method="POST">
         @csrf
@@ -33,7 +33,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+        <button type="submit" class="btn btn-success">Simpan</button>
     </form>
 </div>
 @endsection

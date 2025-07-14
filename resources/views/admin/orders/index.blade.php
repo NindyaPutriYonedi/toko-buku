@@ -13,7 +13,7 @@
     <table class="table table-bordered table-striped">
         <thead class="table-dark">
             <tr>
-                <th>ID</th>
+                <th>No</th> {{-- Ganti dari ID --}}
                 <th>Customer</th>
                 <th>Total</th>
                 <th>Status</th>
@@ -32,7 +32,7 @@
                     ];
                 @endphp
                 <tr>
-                    <td>#{{ $order->id }}</td>
+                    <td>{{ $loop->iteration }}</td> {{-- Nomor urut --}}
                     <td>{{ $order->user->name ?? '-' }}</td>
                     <td>Rp{{ number_format($order->total_amount, 0, ',', '.') }}</td>
                     <td>
@@ -65,7 +65,16 @@
                     <td>{{ $order->created_at->format('d-m-Y') }}</td>
                     <td>
                         <a href="{{ route('admin.orders.show', $order->id) }}" class="btn btn-sm btn-primary">Detail</a>
-                    </td>
+                    
+
+    <form action="{{ route('admin.orders.destroy', $order->id) }}" method="POST" class="d-inline"
+      onsubmit="return confirm('Yakin ingin menghapus order ini?')">
+        @csrf
+        @method('DELETE')
+        <button type="submit" class="btn btn-sm btn-danger">Hapus</button>
+    </form>
+</td>
+
                 </tr>
             @endforeach
         </tbody>

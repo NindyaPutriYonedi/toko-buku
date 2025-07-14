@@ -12,8 +12,8 @@
                     background-size: cover; background-position: center; min-height: 550px;">
             <div class="container h-100 d-flex align-items-center justify-content-end">
                 <div class="text-end bg-white bg-opacity-75 p-4 rounded shadow-sm">
-                    <h1 class="display-5 fw-bold text-dark">Buy One Get One</h1>
-                    <p class="text-secondary mb-4">Gospel Voices and Nonfiction Books</p>
+                    <h1 class="display-5 fw-bold text-dark">40% Discount</h1>
+                    <p class="text-secondary mb-4">On Books by Eka Kurniawan</p>
                     <a href="login" class="btn btn-dark text-uppercase fw-semibold px-4 py-2 rounded-pill">Shop Now</a>
                 </div>
             </div>

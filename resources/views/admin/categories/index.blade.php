@@ -10,7 +10,7 @@
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    <a href="{{ route('admin.categories.create') }}" class="btn btn-primary mb-3">+ Tambah Kategori</a>
+    <a href="{{ route('admin.categories.create') }}" class="btn btn-success mb-3">+ Tambah Kategori</a>
 
     <table class="table table-bordered">
         <thead>
@@ -28,6 +28,7 @@
                     <td>{{ $cat->name }}</td>
                     <td>{{ $cat->description }}</td>
                     <td>
+                        <div class="d-flex gap-2">
                         <a href="{{ route('admin.categories.edit', $cat) }}" class="btn btn-warning btn-sm">Edit</a>
                         <form action="{{ route('admin.categories.destroy', $cat) }}" method="POST" class="d-inline"
                             onsubmit="return confirm('Yakin hapus kategori ini?')">
@@ -35,6 +36,7 @@
                             @method('DELETE')
                             <button class="btn btn-danger btn-sm">Hapus</button>
                         </form>
+                        </div>
                     </td>
                 </tr>
             @endforeach

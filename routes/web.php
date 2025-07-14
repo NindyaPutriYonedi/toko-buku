@@ -78,6 +78,7 @@ Route::get('/book/{id}', [NindyBookController::class, 'show'])->name('book.show'
         Route::get('/customers', [AdminCustomerController::class, 'index'])->name('customers');
         Route::resource('categories', AdminCategoryController::class)->names('admin.categories');
         Route::resource('categories', AdminCategoryController::class);
+Route::delete('/orders/{id}', [AdminOrderController::class, 'destroy'])->name('orders.destroy');
 
 //Route::resource('customers', AdminCustomerController::class)->only(['index', 'destroy']);
 

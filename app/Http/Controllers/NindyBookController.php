@@ -13,11 +13,13 @@ class NindyBookController extends Controller
     public function index() {
         $books = NindyBook::with('category')->get();
 
-        $bestSellers = NindyBook::withCount('orderItems')
-    ->having('order_items_count', '>', 2)
-    ->orderByDesc('order_items_count')
+        $bestSellers = NindyBook::withSum('orderItems as total_quantity', 'quantity')
+    ->having('total_quantity', '>', 5)
+    ->orderByDesc('total_quantity')
     ->take(4)
     ->get();
+
+
 
     return view('books.index', compact('books', 'bestSellers'));
     }
